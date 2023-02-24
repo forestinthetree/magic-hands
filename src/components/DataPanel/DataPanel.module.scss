@@ -1,0 +1,86 @@
+@use "../../design-system/" as *;
+
+@mixin position {
+  &.bottomLeft {
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+  }
+
+  &.bottomRight {
+    bottom: 0;
+    right: 0;
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+  }
+
+  &.topLeft {
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+  }
+
+  &.topRight {
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+  }
+}
+
+.dataPanel {
+  --border-color: var(--muted-border-color);
+  --font-size: #{$font-size-xs};
+  --data-panel-summary-padding: #{$size-1} #{$size-2};
+  --data-panel-detail-padding: 0 #{$size-2};
+
+  position: absolute;
+  z-index: 100;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  width: 20rem;
+  border-radius: 0;
+
+  @include position;
+
+  summary {
+    --font-size: 0.5rem;
+    padding: var(--data-panel-summary-padding);
+    background-color: var(--color-grey-50);
+    font-size: $font-size-xs;
+
+    &:hover {
+      background-color: var(--color-grey-100);
+    }
+  }
+
+  details {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &[open] > summary {
+      margin-bottom: $size-1;
+    }
+  }
+}
+
+.handednessDetails,
+.gesturesDetails {
+  ul {
+    @include list-style-none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing);
+    margin: 0;
+    padding: var(--data-panel-detail-padding);
+  }
+}

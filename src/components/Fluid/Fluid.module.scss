@@ -1,0 +1,22 @@
+#inputVideo {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  opacity: 0.1;
+  object-fit: fill;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+#fluidCanvas {
+  width: 100%;
+  height: 100vh;
+}

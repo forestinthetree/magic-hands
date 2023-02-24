@@ -1,47 +1,24 @@
-# Astro Starter Kit: Minimal
+# Magic Hands 🙌🏼
 
+A remix of human crafted [fluid simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/) and machine crafted [hand detection](https://mediapipe-studio.webapps.google.com/demo/gesture_recognizer), by [Forest in the Tree](https://www.forestinthetree.com/).
+
+## Development
+
+### Installation
+
+1. Use correct node version using asdf (or similar):
+
+   1. asdf https://asdf-vm.com/#/core-manage-asdf
+   1. asdf-nodejs https://github.com/asdf-vm/asdf-nodejs
+
+1. Install dependencies: `npm install`
+1. Run server: `npm start`
+1. Open [http://localhost:3000](http://localhost:3000)
+
+### Updating Mediapipe files
+
+The files need to be served in the `public` folder, so when they are updated in `npm`, they also need to be copied over. To do this, run
+
+```bash
+npm run copy:mediapipe-wasm
 ```
-npm create astro@latest -- --template minimal
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

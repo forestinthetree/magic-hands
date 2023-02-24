@@ -1,15 +1,30 @@
 {
-	"name": "fluid-hands",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"astro": "^2.0.15"
-	}
+  "name": "magic-hands",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "copy:mediapipe": "cp -R node_modules/@mediapipe public"
+  },
+  "dependencies": {
+    "@astrojs/solid-js": "^2.0.2",
+    "@mediapipe/camera_utils": "^0.3.1675466862",
+    "@mediapipe/control_utils": "^0.6.1675466023",
+    "@mediapipe/drawing_utils": "^0.3.1675466124",
+    "@mediapipe/hands": "^0.4.1675469240",
+    "@mediapipe/tasks-vision": "^0.1.0-alpha-4",
+    "@picocss/pico": "^1.5.7",
+    "astro": "^2.0.15",
+    "solid-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.1",
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0",
+    "sass": "^1.58.3"
+  }
 }

@@ -1,0 +1,11 @@
+@use "colors" as *;
+
+@forward "sizes";
+@forward "typography";
+@forward "mixins";
+
+:root {
+  @each $name, $hex in $colors {
+    --color-#{$name}: #{$hex};
+  }
+}

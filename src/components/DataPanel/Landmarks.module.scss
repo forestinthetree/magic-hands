@@ -1,0 +1,51 @@
+@use "../../design-system/" as *;
+
+.container {
+  --nav-element-spacing-vertical: #{$size-1};
+  --nav-element-spacing-horizontal: #{$size-0_5};
+
+  display: flex;
+  flex-direction: column;
+  padding: var(--data-panel-detail-padding);
+
+  nav {
+    --nav-link-spacing-vertical: 0;
+    --nav-link-spacing-horizontal: #{$size-1};
+    margin-top: -$size-1;
+    margin-bottom: $size-1;
+
+    a {
+      font-size: $font-size-xs;
+    }
+
+    :global(.secondary) {
+      pointer-events: none;
+    }
+  }
+
+  canvas {
+    margin-top: $size-1;
+    margin-bottom: $size-2;
+    border: 1px solid var(--muted-border-color);
+  }
+}
+
+.landmarks {
+  @include list-style-none;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    padding: 0;
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

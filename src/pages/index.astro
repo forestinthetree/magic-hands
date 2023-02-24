@@ -1,15 +1,27 @@
 ---
+import { Fluid } from "../components/Fluid/Fluid";
+
+const title = "Magic hands 🙌🏼";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <script type="text/javascript" src="./dat.gui/dat.gui.min.js"></script>
+    <script
+      src="/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>{title}</title>
+  </head>
+  <body>
+    <Fluid client:only="solid-js" />
+  </body>
 </html>
+<style lang="scss" is:global>
+  @use "../design-system";
+  @use "@picocss/pico";
+</style>

@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { fixtureGestureResults } from "../data/fixtureGestureResults";
+import { DataPanel } from "../components/DataPanel/DataPanel";
+---
+
+<Layout title="Lu Actions">
+  <DataPanel client:only="solid" results={fixtureGestureResults} />
+</Layout>
