@@ -15,6 +15,7 @@ import { initFluidSimulation } from "./script";
 
 import styles from "./Fluid.module.scss";
 import { createTouchEvent } from "../../utils/touch-utils";
+import { Footer } from "../Footer/Footer";
 
 // Gesture `categoryName`s: ["None", "Closed_Fist", "Open_Palm", "Pointing_Up", "Thumb_Down", "Thumb_Up", "Victory", "ILoveYou"]
 const GESTURE_MATCH = "Open_Palm";
@@ -190,6 +191,7 @@ export const Fluid = () => {
         playsinline
       ></video>
       <canvas ref={fluidCanvasElement} id={styles.fluidCanvas}></canvas>
+      <Footer />
     </main>
   );
 };

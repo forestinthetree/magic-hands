@@ -1,0 +1,15 @@
+@use "../../design-system/" as *;
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: $font-size-xs;
+  padding: $size-1 $size-2;
+  color: var(--color-gray-50);
+
+  a {
+    color: var(--color-green-300);
+  }
+}
