@@ -14,7 +14,6 @@
     "@astrojs/solid-js": "^2.0.2",
     "@mediapipe/camera_utils": "^0.3.1675466862",
     "@mediapipe/control_utils": "^0.6.1675466023",
-    "@mediapipe/drawing_utils": "^0.3.1675466124",
     "@mediapipe/hands": "^0.4.1675469240",
     "@mediapipe/tasks-vision": "^0.1.0-alpha-4",
     "@picocss/pico": "^1.5.7",
