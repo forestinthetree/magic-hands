@@ -1,29 +1,10 @@
 ---
 import { Fluid } from "../components/Fluid/Fluid";
+import Layout from "../layouts/Layout.astro";
 
 const title = "Magic hands 🙌🏼";
 ---
 
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <script type="text/javascript" src="./dat.gui/dat.gui.min.js"></script>
-    <script
-      defer
-      data-domain="magichands.vercel.app"
-      src="https://plausible.io/js/script.js"
-    ></script>
-
-    <title>{title}</title>
-  </head>
-  <body>
-    <Fluid client:only="solid-js" />
-  </body>
-</html>
-<style lang="scss" is:global>
-  @use "../design-system";
-  @use "@picocss/pico";
-</style>
+<Layout title={title}>
+  <Fluid client:only="solid-js" />
+</Layout>

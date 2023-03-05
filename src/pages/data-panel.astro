@@ -2,8 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import { fixtureGestureResults } from "../data/fixtureGestureResults";
 import { DataPanel } from "../components/DataPanel/DataPanel";
+
+const title = "Data panel";
 ---
 
-<Layout title="Lu Actions">
+<Layout title={title}>
   <DataPanel client:only="solid" results={fixtureGestureResults} />
 </Layout>
