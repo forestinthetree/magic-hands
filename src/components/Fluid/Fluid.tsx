@@ -149,6 +149,8 @@ function processResults({
 }
 
 export const Fluid = () => {
+  const isDebug =
+    new URLSearchParams(window.location.search).get("debug") === "true";
   const [gestureResults, setGestureResults] =
     createSignal<GestureRecognizerResult>();
 
@@ -180,7 +182,7 @@ export const Fluid = () => {
 
   return (
     <main ref={mainElement}>
-      <DataPanel results={gestureResults()} />
+      {isDebug && <DataPanel results={gestureResults()} />}
 
       <video
         ref={videoElement}

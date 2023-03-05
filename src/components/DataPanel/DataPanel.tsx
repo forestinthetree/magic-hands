@@ -19,7 +19,7 @@ export const DataPanel: Component<Props> = (props) => {
     <article
       class={`${styles.dataPanel} ${styles[props.position ?? "bottomLeft"]}`}
     >
-      <details>
+      <details open>
         <summary>Landmarks</summary>
         <Landmarks handData={handData()} />
       </details>

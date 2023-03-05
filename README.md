@@ -2,6 +2,10 @@
 
 A remix of human crafted [fluid simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/) and machine crafted [hand detection](https://mediapipe-studio.webapps.google.com/demo/gesture_recognizer), by [Forest in the Tree](https://www.forestinthetree.com/).
 
+## Debugging
+
+To show the debug panel for hand detection add `?debug=true` to the URL.
+
 ## Development
 
 ### Installation
