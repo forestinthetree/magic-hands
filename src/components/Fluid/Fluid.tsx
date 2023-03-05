@@ -165,8 +165,6 @@ export const Fluid = () => {
         nowInMs
       );
 
-      // console.log(results);
-
       processResults({ results, fluidSimulation, isFlipped: true });
       setGestureResults(results);
 
