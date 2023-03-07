@@ -11,7 +11,7 @@ import type {
 import { Coords2D, triangleCentroid } from "../../utils/math-utils";
 import { HAND_LABEL_INDEX } from "../../utils/mediapipe-hands-constants";
 import { DataPanel } from "../DataPanel/DataPanel";
-import { initFluidSimulation } from "./script";
+import { initFluidSimulation } from "./webgl-fluid-simulation";
 
 import styles from "./Fluid.module.scss";
 import { createTouchEvent } from "../../utils/touch-utils";

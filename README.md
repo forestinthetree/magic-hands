@@ -26,3 +26,11 @@ The files need to be served in the `public` folder, so when they are updated in 
 ```bash
 npm run copy:mediapipe-wasm
 ```
+
+## License
+
+Magic Hands is open source under the [GNU Affero General Public License Version 3 (AGPLv3)](https://www.gnu.org/licenses/agpl-3.0.en.html) or any later version.
+
+If you contribute to the project, you agree that your contributions will also be licensed under the AGPL v3 License.
+
+If you have queries, feel free to email [licenses@forestinthetree.com](mailto:licenses@forestinthetree.com).
