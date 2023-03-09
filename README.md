@@ -8,10 +8,6 @@ It is a remix of human crafted [fluid simulation](https://paveldogreat.github.io
 
 You can play with it at: https://magichands.forestinthetree.com/
 
-## Debugging
-
-To show the debug panel for hand detection, add `?debug=true` to the URL.
-
 ## Development
 
 ### Installation
@@ -32,6 +28,10 @@ The files need to be served in the `public` folder, so when they are updated in 
 ```bash
 npm run copy:mediapipe-wasm
 ```
+
+## Debugging
+
+To show the debug panel for hand detection, add `?debug=true` to the URL.
 
 ## License
 
