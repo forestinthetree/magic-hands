@@ -1,10 +1,16 @@
 # Magic Hands 🙌🏼
 
-A remix of human crafted [fluid simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/) and machine crafted [hand detection](https://mediapipe-studio.webapps.google.com/demo/gesture_recognizer), by [Forest in the Tree](https://www.forestinthetree.com/).
+![Magic Hands image](./images/magic-hands.jpg)
+
+Magic Hands is a digital toy to play with hand movement and computer graphics.
+
+It is a remix of human crafted [fluid simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/) and machine crafted [hand detection](https://mediapipe-studio.webapps.google.com/demo/gesture_recognizer), by [Forest in the Tree](https://www.forestinthetree.com/).
+
+You can play with it at: https://magichands.forestinthetree.com/
 
 ## Debugging
 
-To show the debug panel for hand detection add `?debug=true` to the URL.
+To show the debug panel for hand detection, add `?debug=true` to the URL.
 
 ## Development
 
