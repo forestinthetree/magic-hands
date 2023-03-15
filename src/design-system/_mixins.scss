@@ -7,3 +7,17 @@
     list-style: none;
   }
 }
+
+@mixin unstyled-button {
+  --background-color: transparent;
+  --border-color: transparent;
+  --box-shadow: none;
+  box-sizing: content-box;
+  padding: 0;
+
+  &:is([aria-current], :hover, :active, :focus) {
+    --background-color: var(--primary-focus);
+    --primary-hover: var(--color-grey-700);
+    --box-shadow: none;
+  }
+}

@@ -19,6 +19,7 @@
     "@mediapipe/tasks-vision": "^0.1.0-alpha-4",
     "@picocss/pico": "^1.5.7",
     "astro": "^2.0.15",
+    "classnames": "^2.3.2",
     "solid-js": "^1.6.11"
   },
   "devDependencies": {

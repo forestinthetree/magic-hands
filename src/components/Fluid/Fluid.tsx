@@ -15,7 +15,9 @@ import { initFluidSimulation } from "./webgl-fluid-simulation";
 
 import styles from "./Fluid.module.scss";
 import { createTouchEvent } from "../../utils/touch-utils";
-import { Footer } from "../Footer/Footer";
+import { Dialog } from "../Dialog/Dialog";
+import classnames from "classnames";
+import { MadeBy } from "../Branding/MadeBy";
 
 // Gesture `categoryName`s: ["None", "Closed_Fist", "Open_Palm", "Pointing_Up", "Thumb_Down", "Thumb_Up", "Victory", "ILoveYou"]
 const GESTURE_MATCH = "Open_Palm";
@@ -153,6 +155,7 @@ export const Fluid = () => {
     new URLSearchParams(window.location.search).get("debug") === "true";
   const [gestureResults, setGestureResults] =
     createSignal<GestureRecognizerResult>();
+  const [showDialog, setShowDialog] = createSignal(false);
 
   onMount(async () => {
     const fluidSimulation = initFluidSimulation({
@@ -191,7 +194,49 @@ export const Fluid = () => {
         playsinline
       ></video>
       <canvas ref={fluidCanvasElement} id={styles.fluidCanvas}></canvas>
-      <Footer />
+
+      <button
+        class={classnames("unstyledButton", styles.infoButton, {
+          [styles.hide]: showDialog(),
+        })}
+        onClick={() => setShowDialog(true)}
+      >
+        <i class="ph ph-info"></i>
+      </button>
+
+      <Dialog
+        class={styles.dialog}
+        showDialog={showDialog()}
+        setShowDialog={setShowDialog}
+      >
+        <h1>Magic Hands 🙌🏼</h1>
+        <p>
+          Magic Hands is a digital toy to play with hand movement and computer
+          graphics.
+        </p>
+        <p>
+          <em>
+            Turn on your camera, and move your hands to create some magical
+            visuals
+          </em>
+          &nbsp;🎆
+        </p>
+        <p>
+          It is a remix of human crafted{" "}
+          <a href="https://github.com/PavelDoGreat/WebGL-Fluid-Simulation">
+            fluid simulation
+          </a>{" "}
+          and machine crafted{" "}
+          <a href="https://mediapipe-studio.webapps.google.com/demo/gesture_recognizer">
+            hand and gesture recognition
+          </a>
+          .
+        </p>
+      </Dialog>
+
+      <footer class={classnames(styles.footer)}>
+        <MadeBy />
+      </footer>
     </main>
   );
 };

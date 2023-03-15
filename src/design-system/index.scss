@@ -5,10 +5,23 @@
 @forward "typography";
 @forward "mixins";
 
-:root {
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
   @each $name, $hex in $colors {
     --color-#{$name}: #{$hex};
   }
 
+  --primary: var(--color-green-800);
+  --primary-hover: var(--color-green-600);
   --font-family: #{$font-family-body};
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    cursor: text;
+  }
 }

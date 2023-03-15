@@ -1,20 +1,19 @@
 @use "../../design-system/" as *;
+@use "../constants" as *;
 
-.footer {
-  position: absolute;
+.madeBy {
   display: flex;
   align-items: center;
   gap: $size-1;
-  bottom: 0;
-  right: 0;
-  font-size: $font-size-md;
+  margin-bottom: 0;
   padding: $size-1 $size-2;
-  color: var(--color-grey-400);
+  justify-content: center;
+  min-width: 300px;
 
   a {
     font-family: $font-family-heading;
-    font-size: $font-size-lg;
-    color: var(--color-green-400);
+    font-size: $font-size-xl;
+    color: var(--color-green-700);
   }
 
   i {
