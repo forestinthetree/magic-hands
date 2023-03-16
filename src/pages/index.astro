@@ -1,10 +1,10 @@
 ---
-import { Fluid } from "../components/Fluid/Fluid";
+import { MagicHands } from "../components/MagicHands/MagicHands";
 import Layout from "../layouts/Layout.astro";
 
 const title = "Magic hands";
 ---
 
 <Layout title={title}>
-  <Fluid client:only="solid-js" />
+  <MagicHands client:only="solid-js" />
 </Layout>

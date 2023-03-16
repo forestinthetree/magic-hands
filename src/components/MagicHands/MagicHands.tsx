@@ -13,7 +13,7 @@ import { HAND_LABEL_INDEX } from "../../utils/mediapipe-hands-constants";
 import { DataPanel } from "../DataPanel/DataPanel";
 import { initFluidSimulation } from "./webgl-fluid-simulation";
 
-import styles from "./Fluid.module.scss";
+import styles from "./MagicHands.module.scss";
 import { createTouchEvent } from "../../utils/touch-utils";
 import { Dialog } from "../Dialog/Dialog";
 import classnames from "classnames";
@@ -150,7 +150,7 @@ function processResults({
   previousTouches = touches;
 }
 
-export const Fluid = () => {
+export const MagicHands = () => {
   const isDebug =
     new URLSearchParams(window.location.search).get("debug") === "true";
   const [gestureResults, setGestureResults] =
