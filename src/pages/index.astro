@@ -1,10 +1,19 @@
 ---
 import { MagicHands } from "../components/MagicHands/MagicHands";
-import Layout from "../layouts/Layout.astro";
+import Layout, { Meta } from "../layouts/Layout.astro";
 
-const title = "Magic hands";
+const meta: Meta = {
+  title: "Magic hands 🙌🏼",
+  description:
+    "Magic Hands is a digital toy to play with hand movement and computer graphics",
+  url: "https://magichands.forestinthetree.com/",
+  image: "https://magichands.forestinthetree.com/magic-hands.jpg",
+  imageWidth: 1200,
+  imageHeight: 900,
+  imageAlt: "Making magical visuals using Magic Hands",
+};
 ---
 
-<Layout title={title}>
+<Layout meta={meta}>
   <MagicHands client:only="solid-js" />
 </Layout>

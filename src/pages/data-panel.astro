@@ -1,11 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout, { Meta } from "../layouts/Layout.astro";
 import { fixtureGestureResults } from "../data/fixtureGestureResults";
 import { DataPanel } from "../components/DataPanel/DataPanel";
 
-const title = "Data panel";
+const meta: Meta = {
+  title: "Data panel: Magic hands 🙌🏼",
+  description: "Data panel for Magic Hands",
+  url: "https://magichands.forestinthetree.com/data-panel",
+  image: "https://magichands.forestinthetree.com/magic-hands.jpg",
+  imageWidth: 1200,
+  imageHeight: 900,
+  imageAlt: "Making magical visuals using Magic Hands",
+};
 ---
 
-<Layout title={title}>
+<Layout meta={meta}>
   <DataPanel client:only="solid" results={fixtureGestureResults} />
 </Layout>

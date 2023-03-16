@@ -1,6 +1,6 @@
 # Magic Hands 🙌🏼
 
-![Magic Hands image](./images/magic-hands.jpg)
+![Magic Hands image](./public/magic-hands.jpg)
 
 Magic Hands is a digital toy to play with hand movement and computer graphics.
 
