@@ -39,4 +39,4 @@ Magic Hands is open source under the [GNU Affero General Public License Version 
 
 If you contribute to the project, you agree that your contributions will also be licensed under the AGPL v3 License.
 
-If you have queries, feel free to email [licenses@forestinthetree.com](mailto:licenses@forestinthetree.com).
+If you have any queries, feel free to email [licenses@forestinthetree.com](mailto:licenses@forestinthetree.com).
