@@ -33,6 +33,19 @@ npm run copy:mediapipe-wasm
 
 To show the debug panel for hand detection, add `?debug=true` to the URL.
 
+## Technology stack
+
+Magic Hands is built using the following tech:
+
+- [WebGL Fluid simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/) - visuals
+- [MediaPipe studio gesture recognition](https://mediapipe-studio.webapps.google.com/demo/gesture_recognizer) - hand and gesture recognition
+- [Astro](https://astro.build/) - web framework
+- [SolidJS](https://www.solidjs.com/) - user interface components
+- [PicoCSS](https://picocss.com/) - minimal CSS framework
+- [Sass](https://sass-lang.com/) - CSS
+- [Vercel](https://vercel.com/dashboard) - deployment platform
+- [The Web Platform](https://en.wikipedia.org/wiki/Web_platform) - plain old HTML/JavaScript/CSS etc. - no magic there
+
 ## License
 
 Magic Hands is open source under the [GNU Affero General Public License Version 3 (AGPLv3)](https://www.gnu.org/licenses/agpl-3.0.en.html) or any later version.
