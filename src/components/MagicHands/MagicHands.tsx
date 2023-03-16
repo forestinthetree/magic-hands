@@ -165,6 +165,7 @@ export const MagicHands = () => {
     const gestureRecognizer = await createVideoGestureRecognizer();
     const processWebcam = async () => {
       let nowInMs = Date.now();
+      videoElement.classList.add(styles.initialised);
       const results = await gestureRecognizer.recognizeForVideo(
         videoElement,
         nowInMs

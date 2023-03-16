@@ -12,11 +12,17 @@
   width: 100%;
   height: 100vh;
 
-  opacity: 0.1;
+  opacity: 0;
   object-fit: fill;
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
+
+  transition: opacity 500ms;
+
+  &.initialised {
+    opacity: 0.1;
+  }
 }
 
 #fluidCanvas {
