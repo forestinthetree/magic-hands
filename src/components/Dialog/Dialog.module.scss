@@ -16,7 +16,7 @@ $animation-time: 500ms;
   transition: visibility $animation-time, opacity ease-in-out $animation-time;
 
   @media screen and (min-width: $small-screen-breakpoint) {
-    top: 30%;
+    top: 40%;
     left: 50%;
     width: $size-96;
     height: inherit;
