@@ -233,6 +233,19 @@ export const MagicHands = () => {
           </a>
           .
         </p>
+        <p>
+          To find out more, read the{" "}
+          <a href="https://www.forestinthetree.com/blog/magic-hands">
+            blog post
+          </a>
+          , or have a look at the{" "}
+          <a href="https://www.notion.so/taktran/Magic-Hands-Public-Discussion-2304ea6de3a24115b754020b80ee98c6">
+            discussion
+          </a>
+          . You can also view the{" "}
+          <a href="https://github.com/forestinthetree/magic-hands">code</a>, if
+          you fancy.
+        </p>
       </Dialog>
 
       <footer class={classnames(styles.footer)}>
