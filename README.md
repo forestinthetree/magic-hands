@@ -8,6 +8,8 @@ It is a remix of human crafted [fluid simulation](https://paveldogreat.github.io
 
 You can play with it at: https://magichands.forestinthetree.com/
 
+You can read about it on the [blog post](https://www.forestinthetree.com/blog/magic-hands).
+
 ## Development
 
 ### Installation
