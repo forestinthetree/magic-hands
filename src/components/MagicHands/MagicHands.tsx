@@ -5,6 +5,7 @@ import {
   getHandData,
 } from "../../utils/mediapipe-tasks-vision";
 import type {
+  GestureRecognizer,
   GestureRecognizerResult,
   NormalizedLandmark,
 } from "@mediapipe/tasks-vision";
@@ -162,10 +163,20 @@ export const MagicHands = () => {
       canvasEl: fluidCanvasElement,
     });
 
-    const gestureRecognizer = await createVideoGestureRecognizer();
+    let gestureRecognizer: GestureRecognizer;
+    try {
+      gestureRecognizer = await createVideoGestureRecognizer();
+    } catch (error) {
+      console.error(error);
+    }
     const processWebcam = async () => {
-      let nowInMs = Date.now();
       videoElement.classList.add(styles.initialised);
+
+      if (!gestureRecognizer) {
+        return;
+      }
+
+      let nowInMs = Date.now();
       const results = await gestureRecognizer.recognizeForVideo(
         videoElement,
         nowInMs
