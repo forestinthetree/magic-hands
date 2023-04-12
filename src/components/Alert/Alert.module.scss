@@ -1,0 +1,51 @@
+@use "../../design-system/" as *;
+@use "../constants" as *;
+
+.alert {
+  --body-color: var(--color-grey-800);
+  --link-color: var(--color-grey-50);
+  --background-color: var(--color-grey-50);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  padding: $size-2 $size-8;
+  margin: 0 auto;
+  background: var(--background-color);
+  width: 75%;
+  font-size: $font-size-sm;
+
+  @media screen and (min-width: $small-screen-breakpoint) {
+    width: 50%;
+  }
+
+  &.error {
+    --background-color: var(--color-red-300);
+
+    p {
+      color: var(--body-color);
+      margin-bottom: $size-1;
+    }
+  }
+
+  a {
+    color: var(--link-color);
+  }
+}
+
+.closeButton {
+  @include unstyled-button;
+  --color: var(--body-color);
+
+  position: absolute;
+  top: $size-2;
+  right: $size-2;
+  width: 24px;
+  height: 24px;
+}
+
+:global(.ph) {
+  font-size: 24px;
+}

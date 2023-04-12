@@ -46,6 +46,13 @@ const canonicalUrl = meta.canonicalUrl ?? meta.url;
       data-domain="magichands.forestinthetree.com"
       src="https://plausible.io/js/script.js"
     ></script>
+    <script>
+      window.plausible =
+        window.plausible ||
+        function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+    </script>
     <title>{meta.title}</title>
 
     <meta property="og:site_name" content={meta.title} />

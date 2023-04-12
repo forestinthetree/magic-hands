@@ -19,6 +19,7 @@ import { createTouchEvent } from "../../utils/touch-utils";
 import { Dialog } from "../Dialog/Dialog";
 import classnames from "classnames";
 import { MadeBy } from "../Branding/MadeBy";
+import { ErrorAlert } from "./ErrorAlert";
 
 // Gesture `categoryName`s: ["None", "Closed_Fist", "Open_Palm", "Pointing_Up", "Thumb_Down", "Thumb_Up", "Victory", "ILoveYou"]
 const GESTURE_MATCH = "Open_Palm";
@@ -157,8 +158,12 @@ export const MagicHands = () => {
   const [gestureResults, setGestureResults] =
     createSignal<GestureRecognizerResult>();
   const [showDialog, setShowDialog] = createSignal(false);
+  const [hasMounted, setHasMounted] = createSignal(false);
+  const [error, setError] = createSignal<string>();
+  const hasError = () => hasMounted() && error();
 
   onMount(async () => {
+    setHasMounted(true);
     const fluidSimulation = initFluidSimulation({
       canvasEl: fluidCanvasElement,
     });
@@ -166,8 +171,13 @@ export const MagicHands = () => {
     let gestureRecognizer: GestureRecognizer;
     try {
       gestureRecognizer = await createVideoGestureRecognizer();
-    } catch (error) {
-      console.error(error);
+    } catch (e: Error) {
+      const errorType = "Error initialising gesture recognizer.";
+      setError(errorType);
+      console.error(e);
+      globalThis.plausible("Error", {
+        props: { type: errorType, error: e.toString() },
+      });
     }
     const processWebcam = async () => {
       videoElement.classList.add(styles.initialised);
@@ -197,6 +207,7 @@ export const MagicHands = () => {
 
   return (
     <main ref={mainElement}>
+      {hasError() && <ErrorAlert error={error()!} />}
       {isDebug && <DataPanel results={gestureResults()} />}
 
       <video
